@@ -1,0 +1,7 @@
+{
+  "name": "RDF Plant Observation Report",
+  "description": "A comprehensive web application for conducting and managing risk assessments at a Refuse-Derived Fuel (RDF) plant. It features a dynamic checklist, photo uploads, validation, and options to export reports via PDF or email.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
