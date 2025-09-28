@@ -1,14 +1,14 @@
 
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { GoogleGenAI, Type } from "@google/genai";
-import { getInitialFormData } from './constants';
-import { FormHeader } from './components/FormHeader';
-import { SummaryDashboard } from './components/SummaryDashboard';
-import { AssessmentSection } from './components/AssessmentSection';
-import { FollowUpSection } from './components/FollowUpSection';
-import { Modal } from './components/Modal';
-import type { FormData, Status } from './types';
-import { debounce } from './utils';
+import { getInitialFormData } from './constants.ts';
+import { FormHeader } from './components/FormHeader.tsx';
+import { SummaryDashboard } from './components/SummaryDashboard.tsx';
+import { AssessmentSection } from './components/AssessmentSection.tsx';
+import { FollowUpSection } from './components/FollowUpSection.tsx';
+import { Modal } from './components/Modal.tsx';
+import type { FormData, Status } from './types.ts';
+import { debounce } from './utils.ts';
 
 // Declare jspdf and html2canvas from global scope (CDN)
 declare global {

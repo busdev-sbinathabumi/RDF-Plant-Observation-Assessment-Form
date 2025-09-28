@@ -1,4 +1,4 @@
-import type { FormSection, FormData } from './types';
+import type { FormSection, FormData } from './types.ts';
 
 // FIX: Added parentheses around the object type to correctly define an array of objects. The original type was being misinterpreted due to operator precedence.
 export const INITIAL_FORM_SECTIONS: (Omit<FormSection, 'items'> & { items: Omit<FormSection['items'][0], 'instances'>[] })[] = [
