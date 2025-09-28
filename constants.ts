@@ -1,7 +1,5 @@
-import type { FormSection, FormData } from './types.ts';
 
-// FIX: Added parentheses around the object type to correctly define an array of objects. The original type was being misinterpreted due to operator precedence.
-export const INITIAL_FORM_SECTIONS: (Omit<FormSection, 'items'> & { items: Omit<FormSection['items'][0], 'instances'>[] })[] = [
+export const INITIAL_FORM_SECTIONS = [
   {
     title: '1. Housekeeping & Cleanliness',
     items: [
@@ -72,8 +70,8 @@ export const INITIAL_FORM_SECTIONS: (Omit<FormSection, 'items'> & { items: Omit<
 ];
 
 
-export const getInitialFormData = (): FormData => {
-  const sectionsWithState: FormSection[] = INITIAL_FORM_SECTIONS.map(section => ({
+export const getInitialFormData = () => {
+  const sectionsWithState = INITIAL_FORM_SECTIONS.map(section => ({
     ...section,
     items: section.items.map(item => ({
       ...item,
