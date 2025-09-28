@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { GoogleGenAI, Type } from "@google/genai";
 import { getInitialFormData } from './constants.js';
@@ -8,14 +7,6 @@ import { AssessmentSection } from './components/AssessmentSection.js';
 import { FollowUpSection } from './components/FollowUpSection.js';
 import { Modal } from './components/Modal.js';
 import { debounce } from './utils.js';
-
-// Declare jspdf and html2canvas from global scope (CDN)
-declare global {
-    interface Window {
-        html2canvas: any;
-        jspdf: any;
-    }
-}
 
 const DEFAULT_RECIPIENT_EMAIL = 'area.report@example.com';
 const LOCAL_STORAGE_KEY = 'rdf-plant-assessment-draft';
